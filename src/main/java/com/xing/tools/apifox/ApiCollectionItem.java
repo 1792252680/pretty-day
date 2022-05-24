@@ -7,7 +7,7 @@ import lombok.Data;
 public class ApiCollectionItem{
 	private String name;
 	private String description;
-	private String serverId;
+//	private String serverId;
 	private List<ItemsItem> items;
 	private int parentId;
 }
