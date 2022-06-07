@@ -55,9 +55,9 @@ public class PermissionConverter {
                             System.out.println(
                                     "\n" +
                                             "insert into role_permission(permissionId, roleId)\n" +
-                                            "select permissionId, 1\n" +
-                                            "from role_permission\n" +
-                                            "where permissionId not in ( select id from permission );"
+                                            "select id, 1\n" +
+                                            "from permission\n" +
+                                            "where id not in ( select permissionId from role_permission )"
                             );
                         }
                     } catch (IOException e) {
