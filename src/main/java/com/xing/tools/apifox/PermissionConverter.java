@@ -38,7 +38,7 @@ public class PermissionConverter {
     static Boolean isInsert = false;
 
     public static void main(String[] args) throws IOException {
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("-- ====> 开始生成权限表");
         FileSystemView view = FileSystemView.getFileSystemView();
         File file = view.getHomeDirectory();
 
@@ -64,7 +64,7 @@ public class PermissionConverter {
                         throw new RuntimeException(e);
                     }
                 });
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+        System.out.println("-- ====> 生成权限表完成");
     }
 
     private static String concatLeftAndRight(String column) {
