@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class PermissionConn {
 
@@ -80,6 +81,6 @@ public class PermissionConn {
                 se.printStackTrace();
             }
         }
-        return permExpressionList;
+        return Optional.ofNullable(permExpressionList).orElse(new ArrayList<>());
     }
 }
